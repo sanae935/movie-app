@@ -1,6 +1,8 @@
-const express = require('express');
+import express from 'express';
+import Review from '../models/Review.js';
+
+
 const router = express.Router();
-const Review = require('../models/Review');
 
 router.get('/:movieId', async (req, res) => {
     try {
@@ -22,4 +24,4 @@ router.get('/:movieId', async (req, res) => {
     }
   });
   
-  module.exports = router;
+  export default router;
